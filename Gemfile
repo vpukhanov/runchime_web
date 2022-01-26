@@ -66,19 +66,19 @@ group :development do
   gem 'rubocop'
   gem 'rubocop-rails'
 
+  # Deployment gems
+  gem 'capistrano', '~> 3.16'
+  gem 'capistrano-passenger', '~> 0.2.1'
+  gem 'capistrano-rails', '~> 1.6'
+  gem 'capistrano-rbenv', '~> 2.2'
+
+  # SSH keys gems
+  gem 'bcrypt_pbkdf', '~> 1.1'
+  gem 'ed25519', '~> 1.3'
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
-# Deployment gems
-gem 'capistrano', '~> 3.16'
-gem 'capistrano-passenger', '~> 0.2.1'
-gem 'capistrano-rails', '~> 1.6'
-gem 'capistrano-rbenv', '~> 2.2'
-
-# SSH keys gems
-gem 'bcrypt_pbkdf', '~> 1.1'
-gem 'ed25519', '~> 1.3'
