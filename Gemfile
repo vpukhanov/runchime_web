@@ -78,3 +78,7 @@ gem 'capistrano', '~> 3.16'
 gem 'capistrano-passenger', '~> 0.2.1'
 gem 'capistrano-rails', '~> 1.6'
 gem 'capistrano-rbenv', '~> 2.2'
+
+# SSH keys gems
+gem 'bcrypt_pbkdf', '~> 1.1'
+gem 'ed25519', '~> 1.3'
