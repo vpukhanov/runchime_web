@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Runchime - Save Workout Playlists</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+<body class="leading-normal tracking-normal text-gray-900">
+<div class="h-screen pb-14">
+  <nav class="w-full container mx-auto p-6">
+    <div class="w-full flex items-center justify-between">
+      <a class="flex items-center text-cyan-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="/">
+        <svg class="h-8 fill-current text-cyan-600 pr-2" viewBox="0 0 504 358" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g transform="matrix(-1 0 0 1 407 45.535)" fill="currentColor" fill-rule="nonzero"><path d="M72.79 27.07H27.07a9.018 9.018 0 0 0-9.023 9.024 9.018 9.018 0 0 0 9.023 9.023h45.72a9.018 9.018 0 0 0 9.022-9.023 9.018 9.018 0 0 0-9.023-9.024ZM72.79 99.258H27.07a9.018 9.018 0 0 0-9.023 9.023 9.018 9.018 0 0 0 9.023 9.024h45.72a9.018 9.018 0 0 0 9.022-9.024 9.018 9.018 0 0 0-9.023-9.023ZM54.742 63.164H9.023A9.018 9.018 0 0 0 0 72.187a9.018 9.018 0 0 0 9.023 9.024h45.72a9.018 9.018 0 0 0 9.023-9.023 9.018 9.018 0 0 0-9.024-9.024ZM289.953 108.281h-54.742V72.187c0-15.848-19.388-24.193-30.812-12.754l-72.182 72.182c-7.05 7.05-7.05 18.47 0 25.52l41.38 41.38-50.404 50.405c-7.05 7.05-7.05 18.47 0 25.52 7.05 7.049 18.47 7.05 25.52 0l63.164-63.165c7.05-7.05 7.05-18.47 0-25.52l-41.381-41.38 28.621-28.621v10.574c0 9.966 8.081 18.047 18.047 18.047h72.79c9.965 0 18.046-8.08 18.046-18.047 0-9.966-8.08-18.047-18.047-18.047ZM168.522 16.567c-7.173-4.767-16.69-3.824-22.77 2.256l-49.63 49.629c-7.05 7.05-7.05 18.47 0 25.52 7.05 7.049 18.47 7.048 25.52-.001l39.17-39.17 13.194 9.505 17.63-17.629c2.948-2.949 6.427-5.238 10.23-7.025l-33.344-23.085Z"/><path d="M119.457 169.894c-4.572-4.572-7.625-10.2-9.234-16.285l-95.31 95.31c-7.05 7.05-7.05 18.47 0 25.52 7.048 7.05 18.469 7.05 25.519 0l91.785-91.785-12.76-12.76Z"/><circle cx="244.234" cy="27.07" r="27.07"/></g><path d="M90.582 357.203c-17.318-29.948-30.24-59.7-38.77-89.258-8.528-29.557-12.792-59.244-12.792-89.062 0-29.948 4.264-59.668 12.792-89.16C60.343 60.23 73.264 30.64 90.583.953h-31.25c-19.661 30.73-34.31 60.807-43.945 90.234C5.75 120.615.934 149.847.934 178.883c0 29.166 4.817 58.43 14.453 87.793 9.635 29.362 24.284 59.538 43.945 90.527h31.25ZM444.809 357.203c19.661-30.729 34.31-60.807 43.945-90.234 9.635-29.427 14.453-58.79 14.453-88.086 0-29.037-4.818-58.268-14.453-87.696C479.118 61.76 464.47 31.682 444.809.954h-31.25c17.317 29.818 30.24 59.505 38.77 89.063 8.528 29.557 12.792 59.18 12.792 88.867 0 29.557-4.264 59.114-12.793 88.672-8.529 29.557-21.452 59.44-38.77 89.648h31.25Z" fill="currentColor" fill-rule="nonzero"/></g></svg>
+        <h1>Runchime</h1>
+      </a>
+    </div>
+    <div class="flex w-1/2 justify-end content-center">
+      <!-- Social links -->
+    </div>
+  </nav>
+  <main class="container px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+    <%= yield %>
+  </main>
+</div>
+</body>
+</html>
