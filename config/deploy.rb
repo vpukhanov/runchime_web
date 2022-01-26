@@ -7,10 +7,10 @@ set :application, 'runchime_web'
 set :repo_url, 'https://github.com/vpukhanov/runchime_web'
 set :branch, 'main'
 set :deploy_to, "/home/netrunner/#{fetch :application}"
+set :format_options, truncate: false
+
 append :linked_files, 'config/master.key'
 
-# Default value for :format is :airbrussh.
-# set :format, :airbrussh
 
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
