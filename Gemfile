@@ -80,4 +80,4 @@ group :development do
   # gem "spring"
 end
 
-gem "passenger", "~> 6.0", require: "phusion_passenger/rack_handler"
+gem 'passenger', '~> 6.0', require: 'phusion_passenger/rack_handler'
