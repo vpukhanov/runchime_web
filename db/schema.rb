@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2022_01_27_163448) do
     t.index ["workout_id"], name: "index_scrobbles_on_workout_id"
   end
 
-  create_table "workouts", force: :cascade do |t|
+  create_table "workouts", id: :string, force: :cascade do |t|
     t.string "activity_type"
     t.datetime "start_uts"
     t.datetime "end_uts"
