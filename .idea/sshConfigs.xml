@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SshConfigs">
-    <configs>
-      <sshConfig host="runchi.me" id="ce11443a-f03d-4f3f-898c-b4e6310de8c7" keyPath="$USER_HOME$/.ssh/id_ed25519" port="22" nameFormat="DESCRIPTIVE" username="netrunner" useOpenSSHConfig="true" />
-    </configs>
-  </component>
-</project>
