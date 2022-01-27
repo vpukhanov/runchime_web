@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Runchime - Save Workout Playlists</title>
+  <% if @title %>
+    <title><%= @title %> | Runchime - Save Workout Playlists</title>
+  <% else %>
+    <title>Runchime - Save Workout Playlists</title>
+  <% end %>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -35,6 +39,16 @@
   <main class="container px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
     <%= yield %>
   </main>
+  <footer class="container px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+    <div class="w-full md:w-1/2 pt-16 pb-6 text-sm text-center md:text-left">
+      <a class="text-gray-500 no-underline hover:no-underline" href="https://pukhanov.com" target="_blank">
+        &copy; 2022 Vyacheslav Pukhanov
+      </a>
+    </div>
+    <div class="w-full md:w-1/2 pt-16 pb-6 text-sm text-center md:text-right">
+      <%= link_to 'Privacy Policy', { controller: :static_pages, action: :privacy }, class: 'text-gray-500 no-underline hover:no-underline' %>
+    </div>
+  </footer>
 </div>
 </body>
 </html>
