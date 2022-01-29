@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class WorkoutsController < ApplicationController
+  protect_from_forgery with: :null_session
+
   before_action :set_workout, only: %i[show destroy]
 
   # GET /workouts/1 or /workouts/1.json
@@ -37,6 +39,10 @@ class WorkoutsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def workout_params
-    params.require(:workout).require(:activity_type, :start_uts, :end_uts, :scrobbles)
+    # noinspection RubyMismatchedArgumentType
+    params.require(:workout).permit(
+      :activity_type, :start_uts, :end_uts,
+      scrobbles_attributes: %i[uts name album artist image url]
+    )
   end
 end

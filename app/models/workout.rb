@@ -3,7 +3,8 @@
 require 'securerandom'
 
 class Workout < ApplicationRecord
-  has_many :scrobbles, dependent: :destroy
+  has_many :scrobbles, inverse_of: :workout, dependent: :destroy
+  accepts_nested_attributes_for :scrobbles
 
   before_save :generate_id
 

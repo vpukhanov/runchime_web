@@ -2,6 +2,6 @@
 
 class AddWorkoutToScrobble < ActiveRecord::Migration[7.0]
   def change
-    add_reference :scrobbles, :workout, null: false, foreign_key: true # rubocop:disable Rails/NotNullColumn
+    add_reference :scrobbles, :workout, type: :string, null: false, foreign_key: true # rubocop:disable Rails/NotNullColumn
   end
 end

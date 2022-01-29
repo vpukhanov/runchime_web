@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2022_01_27_163448) do
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "workout_id", null: false
+    t.string "workout_id", null: false
     t.index ["workout_id"], name: "index_scrobbles_on_workout_id"
   end
 
