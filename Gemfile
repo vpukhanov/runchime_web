@@ -41,14 +41,11 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
-# Use Sass to process CSS
-# gem "sassc-rails"
-
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
-
 # Tailwind CSS styles
 gem 'tailwindcss-rails', '~> 2.0'
+
+# Application Server
+gem 'passenger', '~> 6.0', require: 'phusion_passenger/rack_handler'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -72,12 +69,4 @@ group :development do
   # SSH keys gems
   gem 'bcrypt_pbkdf', '~> 1.1'
   gem 'ed25519', '~> 1.3'
-
-  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
-
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
 end
-
-gem 'passenger', '~> 6.0', require: 'phusion_passenger/rack_handler'
